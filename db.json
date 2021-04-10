@@ -1,0 +1,111 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "1"
+    },
+    {
+      "id": 3,
+      "title": "json-server",
+      "author": "1"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "blog": [
+    {
+      "id": 3,
+      "title": "Pizza Selanska",
+      "text": "Some 3",
+      "date": "2021-03-30T00:58:50.465Z",
+      "autor": "Ivan Ivanov"
+    },
+    {
+      "id": 6,
+      "title": "Pizza Masha ",
+      "text": "Любима піцца",
+      "date": "2021-03-30T00:59:08.947Z",
+      "autor": "Masha"
+    },
+    {
+      "id": 7,
+      "title": "Pizaa",
+      "text": "Some Pizza pAma",
+      "date": "2021-03-30T13:50:15.843Z",
+      "autor": "Masha Dasha"
+    },
+    {
+      "id": 8,
+      "title": "Pizza 3 сира",
+      "text": "Some 4",
+      "date": "2021-03-30T14:31:46.426Z",
+      "autor": "Pasha Hard"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Masha Трупар"
+    },
+    {
+      "id": 3,
+      "name": "Category"
+    },
+    {
+      "id": 4,
+      "name": "Pizza"
+    },
+    {
+      "id": 5,
+      "name": "Няша Степяша"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": "Пицца ",
+      "name": "Іван Парубок",
+      "price": "250",
+      "description": "Піцца Гавайська Хеловінг ",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lapiec-2.appspot.com/o/pizza%2Faa0d0e0a-c530-469a-869b-be1601155279.png?alt=media&token=61b523a5-95b1-41a2-9aa0-33d538f0c7aa"
+    },
+    {
+      "id": 2,
+      "category": "Салат",
+      "name": "Маша Пучкина",
+      "price": "500",
+      "description": "Салат Цезарь",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lapiec-2.appspot.com/o/pizza%2Fdaeeec4d-d989-467a-97a7-c947176ce820.png?alt=media&token=8928f0ba-52f5-4f3f-9bb2-98c07f9bd434"
+    },
+    {
+      "id": 3,
+      "category": "Напитки",
+      "name": "Coca-cola",
+      "price": "10",
+      "description": "some 3",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lapiec-2.appspot.com/o/pizza%2Fd00381e3-08e9-4b83-a931-2c2c146b6508.png?alt=media&token=f6b54a6f-6163-4c2e-903c-d7f901b08174"
+    },
+    {
+      "id": 4,
+      "category": "s",
+      "name": "s",
+      "price": "s",
+      "description": "s",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lapiec-2.appspot.com/o/pizza%2F38c2fc13-afa4-4e12-af3e-519a3c135362.jpeg?alt=media&token=74f9b366-1084-473b-a08f-5547232b9156"
+    }
+  ]
+}

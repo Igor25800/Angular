@@ -1,0 +1,25 @@
+.center {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block{
+    width: 90%;
+    // background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.width {
+    width: 40%;
+    height: 3rem;
+}
+
+
+.modal {
+    top: 40% !important;
+}

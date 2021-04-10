@@ -1,0 +1,10 @@
+<div class="d-flex align-items-start padding">
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link" [routerLink]="['/admin/category']" routerLinkActive="active">Categiry</a>
+      <a class="nav-link" [routerLink]="['/admin/products']" routerLinkActive="active" >Products</a>
+      <a class="nav-link" [routerLink]="[ '/admin/blog' ]" routerLinkActive="active">Blog</a>
+    </div>
+    <div class="tab-content margin" id="v-pills-tabContent">
+      <router-outlet></router-outlet>
+    </div>
+</div>

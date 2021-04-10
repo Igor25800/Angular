@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lapiec-2": {
+      "hosting": {
+        "AngularPizza": [
+          "lapiec-2"
+        ]
+      }
+    }
+  }
+}

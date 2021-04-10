@@ -1,0 +1,17 @@
+<div class="mb-3">
+        <input [(ngModel)]="value.title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="title here..">
+    </div>
+    <div class="mb-3">
+        <textarea [(ngModel)]="value.text"  class="form-control" id="exampleFormControlTextarea1" placeholder="text here..." rows="3"></textarea>
+</div>
+<div class="mb-3">
+    <input [(ngModel)]="value.autor"   type="text" class="form-control" id="exampleFormControlInput1" placeholder="autor here...">
+</div>
+<div class="mb-3">
+    <button (click)=" addBlog()" class="btn btn-dark" type="button" [textContent]="value.isEditState ? 'Add' : 'Update' " ></button>
+</div>
+
+<app-table-blog [adminBlog]="adminBlog" [textValue]="value" (edit)="getAdminBlog()"></app-table-blog>
+
+
+

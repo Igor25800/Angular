@@ -1,0 +1,56 @@
+<div class="container-fluid border">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border heigth">
+      <div class="container-fluid">
+        <a class="navbar-brand">Products</a>
+        <button class="btn btn-dark width" type="button" (click)="openModal(template); reset()">Add</button>
+      </div>
+    </nav>
+    <div class="center">
+    <div class="form-floating mb-3 pading">
+        <input [(ngModel)]="filter"  type="search" class="form-control widthInp" id="floatingInput" placeholder="filter category">
+   </div>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <th>#</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Images</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of arrProducts | search: filter  ; let i=index">
+              <td>{{item.id}}</td>
+              <td>{{item.category}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.description}}</td>
+              <td>{{item.price}}</td>
+              <td class="centerImg">
+                <img [src]="item.images" style="width: 40px; height: 40px;" alt="">
+              </td>
+              <td>
+                <button (click)="openModal(template) ; editProducts(item) " class="btn btn-dark" type="button">Edit</button>
+              </td>
+              <td>
+                <button (click)="openModalDelete(template); deleteProducts(item)" class="btn btn-dark" type="button">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+    </table>
+ </div>
+</div>
+   
+<ng-template #template>
+  <div [ngSwitch]="switch">
+    <app-modal-products-add  *ngSwitchCase="'add'" (modalHide)="close(); getAmdinProducts()" [arr]="arrProducts"  [product]="obj"></app-modal-products-add>
+    <app-modal-products-delete *ngSwitchCase="'delete'" (hideModule)="close();  getAmdinProducts()"  [idDelete]="idDelete"></app-modal-products-delete> 
+  </div>
+</ng-template> 
+
+
+
+ 
+
+ 

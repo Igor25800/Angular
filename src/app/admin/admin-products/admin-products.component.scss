@@ -1,0 +1,52 @@
+.border{
+    border: 2px solid;
+    padding: 0px;
+    
+}
+
+.width{
+    width: 10%;
+}
+
+.heigth{
+    height: 4rem;
+}
+
+.pading{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.table-secondary, .table-secondary>td, .table-secondary>th {
+    background-color: #a8b4ae;
+}
+
+table{
+    width: 95%;
+}
+thead{
+    background-color: rgb(240, 238, 238);
+}
+
+.widthTd{
+    width: 66%;
+}
+
+.centerImg {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+

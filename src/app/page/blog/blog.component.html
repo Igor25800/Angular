@@ -1,0 +1,12 @@
+<div class="container-fluid">
+     <div class="row pading">
+         <div *ngFor="let item of blog" class="card col-3 margin">
+            <img src="../../../assets/unnamed.png" alt="">
+                <div class="card-body">
+                    <p class="card-text color">{{item.date |date}} {{item.autor}}</p>
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text">{{item.text}}</p>
+                </div>
+            </div>
+     </div>
+</div>

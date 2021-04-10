@@ -1,0 +1,23 @@
+.pading{
+    padding: 1rem
+}
+.margin{
+    margin-right: 1rem;
+}
+.color {
+    font-size: 17px;
+    color: #507eb3
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.col-3 {
+    margin-top: 15px;
+    flex: 0 0 24%;
+    max-width: 25%;
+}

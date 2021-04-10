@@ -1,0 +1,20 @@
+<table class="table table-hover table-bordered">
+         <thead>
+             <th>#</th>
+             <th>Name</th>
+             <th>Edit</th>
+             <th>Delete</th>
+         </thead>
+         <tbody>
+            <tr *ngFor="let item of arrCategory | search: filter ; let i=index">
+                <td>{{item.id}}</td>
+                <td class="widthTd">{{item.name}}</td>
+                <td>
+                  <button class="btn btn-dark" type="button" (click)="openModal(template); editCategory(item)">edit</button>                  
+                </td>
+                <td>
+                  <button (click)="openModalDelete(template); deleteCategory(item) " class="btn btn-dark" type="button">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+  </table>
