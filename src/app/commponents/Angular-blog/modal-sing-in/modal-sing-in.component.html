@@ -1,0 +1,13 @@
+<div class="mb-3" >
+    <label (click)="fastIn()" for="exampleFormControlInput1" class="form-label">Email</label>
+    <input  [(ngModel)]="email" type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <input [(ngModel)]="password" type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close()">Close</button>
+  <button (click)="login();" type="button" class="btn btn-success">Submit</button>
+</div>

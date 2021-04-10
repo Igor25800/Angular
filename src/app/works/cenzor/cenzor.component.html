@@ -1,0 +1,23 @@
+<app-nav></app-nav>
+<body>
+    <section class="main">
+        <div class="main__line" >
+            <p>Bad words :</p>
+            <div class="block__row">
+                <span *ngFor="let item of arr" class="red">{{item}}</span>
+            </div>
+        </div>
+        <form name="form">
+            <div class="main__group">
+                <input [(ngModel)]="intValue" name="intValue" type="text" id="inputPassword5" class="form-control width" aria-describedby="passwordHelpBlock" placeholder="word here...">
+                <button (click)="addWords(intValue)" name="btnAdd" type="button" class="btn btn-warning">Add</button>
+                <button (click)="resetWords()" name="btnReset" type="button" class="btn btn-danger">Reset</button>
+            </div>
+            <div class="form-floating">
+                <textarea [(ngModel)]="textArea" name="textArea" id="textAria" name="textArea" class="form-control" placeholder="text here..." id="floatingTextarea2" style="height: 100px"></textarea>
+            </div>
+            <button (click)="cenzorWords()" name="btnCenzor" type="button" class="btn btn-success width">Cenzor</button>
+        </form>
+    </section>
+    
+</body>

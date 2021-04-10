@@ -1,0 +1,17 @@
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Title:</label>
+    <input [(ngModel)]="title" type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <div class="mb-3">
+    <label for="message-text" class="col-form-label">Text:</label>
+    <textarea [(ngModel)]="textArea" class="form-control" id="message-text"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close()">Close</button>
+    <ng-container *ngIf="paramsObj.isButt; else elseTemplate">
+        <button type="button" class="btn btn-success" (click)="addBlock()">Post</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <button type="button" class="btn btn-success" (click)="saveBlock(obj)">Edit Post</button>
+    </ng-template>
+  </div>

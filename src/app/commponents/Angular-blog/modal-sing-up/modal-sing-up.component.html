@@ -1,0 +1,16 @@
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">UserName:</label>
+    <input [(ngModel)]="userName" type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email:</label>
+    <input [(ngModel)]="email" type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Password:</label>
+    <input [(ngModel)]="password" type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close()">Close</button>
+  <button type="button" class="btn btn-primary" (click)="addUser()">Submit</button>
+</div>

@@ -1,0 +1,76 @@
+<section class="page">
+   <div class="block__colum">
+      <h1 style="color: rgb(207, 17, 17);">My phone book!</h1>
+      <div class="border margin"></div> 
+      <form class="row g-3">
+          <div class="col-auto input__width">
+            <input   [(ngModel)]="value" name="value"  type="search" class="form-control margin" id="inputPassword2" placeholder="Name">
+          </div>
+          <div class="col-auto btn__width">
+            <button (click)="addPhone()" type="button" class="btn btn-success width" data-bs-toggle="modal" data-bs-target="#exampleModal">app phone</button>
+          </div>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button  type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <input [(ngModel)]="firstName" name="firstName" type="text" class="form-control margin" id="inputPassword2" placeholder="first name goes here"> 
+                    </div>
+                    <div class="mb-3">
+                      <input [(ngModel)]="secondName" name="secondName"  type="text" class="form-control margin" id="inputPassword2" placeholder="second name goes here">
+                    </div>
+                    <div class="mb-3">
+                      <input [(ngModel)]="number" name="number" type="text" class="form-control margin" id="inputPassword2" placeholder="number phone goes here">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <ng-container *ngIf="isBlock; else elseTemplate">
+                    <button (click)="save()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                  </ng-container>
+                  <ng-template #elseTemplate>
+                    <button (click)="editSave(nemUser)" type="button" class="btn btn-info" data-bs-dismiss="modal">Save</button>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+      </form> 
+        <table class="table">
+          <thead>
+              <tr>
+                  <th (click)="sortName('firstName' , reverse)  " [class.active]="order === 'firstName'"    scope="col">First Name
+                    <span   *ngIf="isRevers" [hidden]="reverse">▼</span>
+                    <span  [hidden]="!reverse">▲</span>
+                  </th>
+
+                  <th (click)="sortName('lastName' , reverse); " [class.active]="order === 'lastName'"   scope="col">Last Name
+                    <span  [hidden]="reverse">▼</span>
+                    <span  [hidden]="!reverse">▲</span>
+                  </th>
+
+                  <th (click)="sortName('number' , reverse)"  [class.active]="order === 'number'"  scope="col">Number
+                    <span  [hidden]="reverse">▼</span>
+                    <span  [hidden]="!reverse">▲</span>
+                  </th>
+                  <th  scope="col">Edit</th>
+                  <th scope="col">Delete</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let name of arr  | filter : value    let i=index">
+                <td>{{name.firstName}}</td>
+                <td>{{name.lastName}}</td>
+                <td>{{name.number}}</td>
+                <td><button (click)="edit(name)" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">edit</button></td>
+                <td><button (click)="delete(i,name)" class="btn btn-danger">Delete</button></td>
+              </tr>
+          </tbody>
+        </table>
+   </div> 
+</section> 

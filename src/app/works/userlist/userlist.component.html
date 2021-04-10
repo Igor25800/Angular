@@ -1,0 +1,61 @@
+<app-nav></app-nav>
+<section class="page">
+    <div class="block__colum">
+        <h1>User:Ivan Ivanov. Count of Task {{arr.length}} </h1>
+        <div class="border margin"></div>
+        <form class="row g-3">
+            <div class="col-auto input__width">
+                <input  [(ngModel)]="newUser" name="newUser" type="text" class="form-control" id="inputPassword2" placeholder="Name">
+            </div>
+            <div class="col-auto btn__width">
+                <button (click)="addUser()"  type="button" class="btn btn-success mb-3 btnwidth">Add</button>
+              </div>
+          </form>
+
+          <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Check</th>
+                    <th scope="col">Done/IN PROGRESS</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let name of arr; let i = index">
+                    <td><b>{{i+1}}</b></td>
+                    <td>{{name.task}}</td>
+                    <td>
+                        <div class="form-check" >
+                            <input [checked]="name.isCheck" (input)="check($event , name)" class="form-check-input size" type="checkbox" >
+                        </div>
+                    </td>
+                    <td>
+                        <ng-container *ngIf="name.isCheck === true; else elseTemplate">
+                            <span class="green">Done</span>
+                        </ng-container>
+                        <ng-template #elseTemplate>
+                            <span class="red">IN PROGRESS</span>
+                        </ng-template>
+                        
+                    </td>
+                    <td><button (click)="editUser(name)"  class="btn btn-warning">Edit</button></td>
+                    <td><button [disabled]="name.isBoleam" (click)="delete(i)" class="btn btn-danger">Delete</button></td> 
+                </tr>
+                <tr *ngIf="isBlock">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input  [(ngModel)]="nameValue" name="nameValue" type="text" class="form-control">
+                    </td>
+                    <td>
+                        <button (click)="saveUser(nameObj)" class="btn btn-success">Save</button>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+</section>

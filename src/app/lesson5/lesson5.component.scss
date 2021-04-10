@@ -1,0 +1,36 @@
+.header__block{
+    width: 100%;
+    height: 5rem;
+    background-color: #32393f;
+    padding: 1.3rem;
+    justify-content: space-between;
+    display: flex;
+}
+
+
+main{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+}
+.block {
+    width: 80%;
+    
+  
+}
+.border{
+    padding: 1.5rem;
+    margin-top: 1rem ;
+    width: 100%;
+    height: 10rem;
+    border: 1px solid #bdbdbd;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.color__P{
+    color: #919193;
+    
+}

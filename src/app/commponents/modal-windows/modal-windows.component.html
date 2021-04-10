@@ -1,0 +1,57 @@
+<div [ngSwitch]="inputSwitch">
+  <div *ngSwitchCase="'singIn'">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input  [(ngModel)]="email" type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Password</label>
+        <input [(ngModel)]="password" type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close1()">Close</button>
+      <button (click)="login()" type="button" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+  <div *ngSwitchCase="'singUp'">
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">UserName:</label>
+        <input [(ngModel)]="userName" type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email:</label>
+        <input [(ngModel)]="email" type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Password:</label>
+        <input [(ngModel)]="password" type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close1()">Close</button>
+      <button type="button" class="btn btn-primary" (click)="addUser()">Submit</button>
+    </div>
+  </div>
+  <div *ngSwitchCase ="'addPost'">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title:</label>
+        <input [(ngModel)]="title" type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+        <label for="message-text" class="col-form-label">Text:</label>
+        <textarea [(ngModel)]="textArea" class="form-control" id="message-text"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close1()">Close</button>
+        <ng-container *ngIf="isbtn; else elseTemplate">
+            <button type="button" class="btn btn-success" (click)="addBlock()">Post</button>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <button type="button" class="btn btn-success" (click)="saveBlock(obj)">Edit Post</button>
+        </ng-template>
+        
+        
+      </div>
+    </div> 
+ </div> 

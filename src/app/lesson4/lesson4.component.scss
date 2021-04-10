@@ -1,0 +1,69 @@
+.page{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.block__colum {
+    width: 90%;
+}
+.margin{
+    margin-bottom: 1rem;
+}
+.input__width{
+    width: 85%
+}
+.btnwidth{
+    width: 100%;
+}
+.btn__width{
+    width: 15%;
+}
+.size{
+    width: 20px;
+    height: 20px;
+}
+
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.width{
+    width: 100%;
+}
+
+// thead th {
+//     cursor: pointer;
+//     margin-right: 15px;
+//     margin-left: 15px;
+  
+//     span {
+//       visibility: hidden;
+//     }
+  
+//     &.active {
+//       color: #000;
+  
+//       span {
+//         visibility: visible;
+//       }
+//     }
+//   }
+  
+thead th {
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 15px;
+  
+    span {
+      visibility: hidden;
+    }
+  
+    &.active {
+      span {
+        visibility: visible;
+      }
+    }
+  }
