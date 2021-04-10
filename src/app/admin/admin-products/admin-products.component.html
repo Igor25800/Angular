@@ -1,0 +1,107 @@
+<form>
+    <div class="form-group">
+        <select   (change)="setCategory($event.target.value)" class="form-select" aria-label="Default select example">
+            <option selected>Виберіть Категорію</option>
+            <option *ngFor="let category of adminCategory" [value]="category.id"  [selected]="category.id === idCategory" >
+                {{category.nameUA}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="nameEN">Product name EN</label>
+        <input [(ngModel)]="nameEN" name="nameEN" type="text" class="form-control" id="nameEN">
+    </div>
+    <div class="form-group">
+        <label for="nameUA">Product name UA</label>
+        <input [(ngModel)]="nameUA" name="nameUA" type="text" class="form-control" id="nameUA">
+    </div>
+    <div class="form-group">
+        <label for="description">Product description</label>
+        <input [(ngModel)]="description" name="description" type="text" class="form-control" id="description">
+    </div>
+    <h4 style="text-align: center;">Характеристика Продуктов</h4>
+    <div class="row">
+        <div class="col-6 form-group">
+            <label for="proteins">Product proteins</label>
+            <input [(ngModel)]="proteins" name="proteins" type="text" class="form-control" id="proteins">
+        </div>
+        <div class="col-6 form-group">
+            <label for="carbohydrates">Product carbohydrates</label>
+            <input [(ngModel)]="carbohydrates" name="carbohydrates" type="text" class="form-control" id="carbohydrates">
+        </div>
+        <div class="col-6 form-group">
+            <label for="fats">Product fats</label>
+            <input [(ngModel)]="fats" name="fats" type="text" class="form-control" id="fats">
+        </div>
+        <div class="col-6 form-group">
+            <label for="Calorie">Product Calorie</label>
+            <input [(ngModel)]="calorie" name="Calorie" type="text" class="form-control" id="Calorie">
+        </div>
+    </div>
+        <h4 style="text-align: center;">Цена , Вага</h4>
+    <div class="row">
+        <div class="col-6 form-group">
+            <label for="weight">Product weight</label>
+            <input [(ngModel)]="weight" name="weight" type="text" class="form-control" id="weight">
+        </div>
+        <div class="col-6 form-group">
+            <label for="price">Product price</label>
+            <input [(ngModel)]="price" name="price" type="text" class="form-control" id="price">
+        </div>
+    </div>
+    <div class="custom-file mb-3">
+        <label for="formFile" class="custom-file-label">Default file input example</label>
+        <input (change)="uploadFile($event)" class="custom-file-input" type="file" id="formFile">
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-primary" 
+        [style.width]="(uploadProgress | async) + '%'" 
+        role="progressbar" 
+        aria-valuemin="0" 
+        aria-valuemax="100"></div>
+    </div>
+
+    <button *ngIf="isBlockBtn" style="margin-top: 20px; margin-bottom: 20px;" [disabled]="isAddBtn" class="btn btn-success" (click)="addProduct()">add</button>
+    <button *ngIf="!isBlockBtn" style="margin-top: 20px; margin-bottom: 20px;"  class="btn btn-warning" (click)="addProduct() ; reset()">Edit</button>
+</form>
+
+<table style="margin-bottom: 5rem;" class="table table-hover table-bordered ">
+    <thead>
+        <th>#</th>
+        <th>image</th>
+        <th>nameUA</th>
+        <th>nameEN</th>
+        <th style="text-align: center;">description</th>
+        <th>proteins</th>
+        <th>carbohydrates</th>
+        <th>fats</th>
+        <th>calorie</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of adminProducts; let i = index">
+            <td>{{i + 1}}</td>
+            <td>
+                <img [src]="product?.image" style="width: 50px; height: 50px" alt="">
+            </td>
+            <td>{{product.nameUA}}</td>
+            <td>{{product.nameEN}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.proteins}}</td>
+            <td>{{product.carbohydrates}}</td>
+            <td>{{product.fats}}</td>
+            <td>{{product.calorie}}</td>
+            <td>
+                <button  (click)="editProducts(product)" class="btn btn-warning" type="button">Edit</button>
+            </td>
+            <td>
+                <button  (click)="deleteProducts(product)" class="btn btn-danger" type="button">Delete</button>
+            </td>
+         
+        </tr>
+    </tbody>
+</table>

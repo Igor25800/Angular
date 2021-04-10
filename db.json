@@ -1,0 +1,312 @@
+{
+  "sales": [
+    {
+      "id": 1,
+      "name": "Купи 2 пици",
+      "description": "За 150 получи 200"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "nameUA": "Піцца ",
+      "nameEN": "pizza",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F72c26f46-cbe7-49d5-b4bc-49e38824a37e.svg%2Bxml?alt=media&token=4854fe67-546d-42c3-9dee-9a77ab98ca5f"
+    },
+    {
+      "id": 2,
+      "nameUA": "Салат",
+      "nameEN": "salad",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F5c09c8a3-c2b6-4588-973f-33a3a89c03fb.svg%2Bxml?alt=media&token=ac63e1ab-c8c6-48ba-a9b9-f738703900e4"
+    },
+    {
+      "id": 3,
+      "nameUA": "Напої",
+      "nameEN": "drinks",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F62b75924-8023-4a5e-8deb-4acf2f849224.svg%2Bxml?alt=media&token=c34ae0ec-1559-4904-a8fd-4e79f41fb0d6"
+    },
+    {
+      "id": 4,
+      "nameUA": "Десерт",
+      "nameEN": "desert",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F95d657d2-9ef7-45fe-84bb-0091afd41b01.svg%2Bxml?alt=media&token=bef7b906-586a-4b43-a1f3-b199919e8737"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "nameUA": "піца",
+        "nameEN": "pizza"
+      },
+      "nameUA": "Гавайская",
+      "nameEN": "gavaii",
+      "description": "сыр моцарелла, соус сливочный, филе куриное, кукуруза, ананас, оливки, перец болгарский",
+      "price": "155 ",
+      "weight": "5351 гр",
+      "count": 1,
+      "proteins": "135 г",
+      "carbohydrates": "25.8 г",
+      "fats": "8.3 г",
+      "calorie": "234 ккал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F83b86a78-1b40-4150-91c1-f0fddb97fb93.png?alt=media&token=e453f3b5-6a9c-4819-a6a1-f20b8bfd67b7"
+    },
+    {
+      "id": 2,
+      "category": {
+        "id": 2,
+        "nameUA": "Салат",
+        "nameEN": "salad",
+        "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F5c09c8a3-c2b6-4588-973f-33a3a89c03fb.svg%2Bxml?alt=media&token=ac63e1ab-c8c6-48ba-a9b9-f738703900e4"
+      },
+      "nameUA": "Цезарь ",
+      "nameEN": "Cezar",
+      "description": "Салат айсберг, помидоры, куриное мясо, сыр пармезан, перепелинные яйца, ароматные сухарики и фирменная заправка - соус «Цезарь».",
+      "price": "135",
+      "weight": "100",
+      "count": 1,
+      "proteins": "11.81 г",
+      "carbohydrates": "9.8 г",
+      "fats": "22.5 г",
+      "calorie": "291 ккал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F3170a14c-665b-4095-938d-5bc61213a550.png?alt=media&token=026d8f57-7dc4-4235-b948-edf1b2053a7c"
+    },
+    {
+      "id": 3,
+      "category": {
+        "id": 1,
+        "nameUA": "піца",
+        "nameEN": "pizza"
+      },
+      "nameUA": "Панчетта",
+      "nameEN": "Panechta",
+      "description": "сир моцарела, соус кисло-солодкий, грудинка свинна, перець болгарський, огірок корнішон.",
+      "price": "153",
+      "weight": "440грам ",
+      "count": 1,
+      "proteins": "12.8 г",
+      "carbohydrates": "32.9 г",
+      "fats": "13.2 г",
+      "calorie": "306 ккал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F5b42fbc1-e1f1-4c2f-8f98-f3f8a6ee136d.png?alt=media&token=8dba4dcd-686e-4e8b-aa93-a6773f37f039"
+    },
+    {
+      "id": 4,
+      "category": {
+        "id": 1,
+        "nameUA": "піца",
+        "nameEN": "pizza"
+      },
+      "nameUA": "Пепероні",
+      "nameEN": "Paperoni",
+      "description": "сир моцарела, соус барбекю, пепероні, пармезан, рукола.",
+      "price": "160",
+      "weight": "400 гр",
+      "count": 1,
+      "proteins": "16 г",
+      "carbohydrates": "34 г",
+      "fats": "13.8 г",
+      "calorie": "328 ккал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F2b6ac24c-df61-4d6b-9f1e-89107a9e1fde.png?alt=media&token=850c7e46-69c8-4b67-a44f-c9b472722458"
+    },
+    {
+      "id": 5,
+      "category": {
+        "id": 2,
+        "nameUA": "Салат",
+        "nameEN": "salad",
+        "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F5c09c8a3-c2b6-4588-973f-33a3a89c03fb.svg%2Bxml?alt=media&token=ac63e1ab-c8c6-48ba-a9b9-f738703900e4"
+      },
+      "nameUA": "Інсалата ді Сальмоне",
+      "nameEN": "Insalto",
+      "description": "рукола, помідор чері, огірок, салат айсберг, соус айолі, пармезан, лосось, перепелине яйце, кунжут.",
+      "price": "144",
+      "weight": "100 грам",
+      "count": 1,
+      "proteins": "6.9 г",
+      "carbohydrates": "3.5 г",
+      "fats": "12.6 г",
+      "calorie": "156 ккал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F6922c2e1-46b3-4567-95f1-ded052fd37b7.png?alt=media&token=a422d778-3609-4f1c-9b76-a6729a83d6b1"
+    },
+    {
+      "id": 6,
+      "category": {
+        "id": 2,
+        "nameUA": "Салат",
+        "nameEN": "salad",
+        "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F5c09c8a3-c2b6-4588-973f-33a3a89c03fb.svg%2Bxml?alt=media&token=ac63e1ab-c8c6-48ba-a9b9-f738703900e4"
+      },
+      "nameUA": "Прімавера",
+      "nameEN": "Primar",
+      "description": "сир моцарела, салат айсберг, помідор чері, огірок, болгарський перець, оливкова олія, фреш лимонний, орегано.",
+      "price": "109",
+      "weight": "100 грам",
+      "count": 1,
+      "proteins": "6.5 г",
+      "carbohydrates": "4.5 г",
+      "fats": "10.6 г",
+      "calorie": "142 ккал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2Fbde110f6-eca8-45bd-ac55-bddecbd0c380.png?alt=media&token=05653952-7aa0-4a03-8a7b-bc337cff4e77"
+    },
+    {
+      "id": 7,
+      "category": {
+        "id": 3,
+        "nameUA": "напої",
+        "nameEN": "drinks"
+      },
+      "nameUA": "Coca Cola — 0,5 л",
+      "nameEN": "Coca Cola — 0,5 л",
+      "price": "24",
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F91d231a3-6896-42e8-b4cb-8077ecf8d423.jpeg?alt=media&token=336ce785-cf05-4930-b946-b11c8712c62e"
+    },
+    {
+      "id": 8,
+      "category": {
+        "id": 3,
+        "nameUA": "напої",
+        "nameEN": "drinks"
+      },
+      "nameUA": "Coca Cola — 1 л",
+      "nameEN": "Coca Cola — 1 л",
+      "price": "33",
+      "weight": "1 литр",
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F242c8ce2-86a0-43a3-8cd9-e8f2c703e7f6.jpeg?alt=media&token=b9e3ff62-9986-406e-b7da-0c01dd18543c"
+    },
+    {
+      "id": 9,
+      "category": {
+        "id": 3,
+        "nameUA": "напої",
+        "nameEN": "drinks"
+      },
+      "nameUA": "Fanta — 0.5 л",
+      "nameEN": "Fanta — 0.5 л",
+      "price": "23",
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2Ff39a7d98-156b-4950-b2ed-30e3ab0b0de6.jpeg?alt=media&token=b00ed687-b336-4327-891b-1436e9a2d6da"
+    },
+    {
+      "id": 10,
+      "category": {
+        "id": 4,
+        "nameUA": "Десерт",
+        "nameEN": "desert",
+        "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F95d657d2-9ef7-45fe-84bb-0091afd41b01.svg%2Bxml?alt=media&token=bef7b906-586a-4b43-a1f3-b199919e8737"
+      },
+      "nameUA": "Сирники",
+      "nameEN": "Sirnuk",
+      "description": "сирники, карамельний соус, сметана",
+      "price": "75",
+      "weight": "240грам",
+      "count": 1,
+      "proteins": "15.3 г",
+      "carbohydrates": "13.6 г",
+      "fats": "14.3 г",
+      "calorie": "247 ккал",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F7e0628d5-8a93-43c1-bad8-4fd976a7c89c.png?alt=media&token=8d00f070-0b0d-4be0-bcab-c6fd96e57455"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userName": "Ігор",
+      "userPhone": 93831223312,
+      "userCity": "Виговського",
+      "userStreet": "Львів",
+      "orders": [
+        {
+          "id": 3,
+          "category": {
+            "id": 1,
+            "nameUA": "піца",
+            "nameEN": "pizza"
+          },
+          "nameUA": "Панчетта",
+          "nameEN": "Panechta",
+          "description": "сир моцарела, соус кисло-солодкий, грудинка свинна, перець болгарський, огірок корнішон.",
+          "price": "153",
+          "weight": "440грам ",
+          "count": 1,
+          "proteins": "12.8 г",
+          "carbohydrates": "32.9 г",
+          "fats": "13.2 г",
+          "calorie": "306 ккал",
+          "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F5b42fbc1-e1f1-4c2f-8f98-f3f8a6ee136d.png?alt=media&token=8dba4dcd-686e-4e8b-aa93-a6773f37f039"
+        }
+      ],
+      "totalPrice": 153,
+      "userComment": "Я хочу піццу",
+      "money": "Готівка",
+      "delivery": "Заздалегідь",
+      "data": "2021-04-11",
+      "time": "12:00"
+    },
+    {
+      "id": 2,
+      "userName": "Ігор",
+      "userPhone": "0633597224",
+      "userCity": "Львів",
+      "userStreet": "Виговського",
+      "userHouse": "152",
+      "orders": [
+        {
+          "id": 2,
+          "category": {
+            "id": 2,
+            "nameUA": "Салат",
+            "nameEN": "salad",
+            "images": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/category%2F5c09c8a3-c2b6-4588-973f-33a3a89c03fb.svg%2Bxml?alt=media&token=ac63e1ab-c8c6-48ba-a9b9-f738703900e4"
+          },
+          "nameUA": "Цезарь ",
+          "nameEN": "Cezar",
+          "description": "Салат айсберг, помидоры, куриное мясо, сыр пармезан, перепелинные яйца, ароматные сухарики и фирменная заправка - соус «Цезарь».",
+          "price": "135",
+          "weight": "100",
+          "count": 1,
+          "proteins": "11.81 г",
+          "carbohydrates": "9.8 г",
+          "fats": "22.5 г",
+          "calorie": "291 ккал",
+          "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F3170a14c-665b-4095-938d-5bc61213a550.png?alt=media&token=026d8f57-7dc4-4235-b948-edf1b2053a7c"
+        }
+      ],
+      "totalPrice": 135,
+      "userComment": "паха",
+      "money": "Готівка",
+      "delivery": "Доставка"
+    },
+    {
+      "id": 3,
+      "userName": "Даша",
+      "userPhone": "0633597224",
+      "userCity": "Львів",
+      "userStreet": "Vugovs",
+      "userHouse": "21",
+      "orders": [
+        {
+          "id": 8,
+          "category": {
+            "id": 3,
+            "nameUA": "напої",
+            "nameEN": "drinks"
+          },
+          "nameUA": "Coca Cola — 1 л",
+          "nameEN": "Coca Cola — 1 л",
+          "price": "33",
+          "weight": "1 литр",
+          "count": 1,
+          "image": "https://firebasestorage.googleapis.com/v0/b/lapiec.appspot.com/o/images%2F242c8ce2-86a0-43a3-8cd9-e8f2c703e7f6.jpeg?alt=media&token=b9e3ff62-9986-406e-b7da-0c01dd18543c"
+        }
+      ],
+      "totalPrice": 33,
+      "userComment": "Rfhnf",
+      "money": "Карта",
+      "delivery": "Доставка"
+    }
+  ]
+}

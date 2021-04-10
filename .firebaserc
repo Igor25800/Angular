@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lapiec": {
+      "hosting": {
+        "la-piec": [
+          "lapiec"
+        ]
+      }
+    }
+  }
+}

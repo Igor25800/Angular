@@ -1,0 +1,49 @@
+
+<table class="table">
+    <thead>
+        <th>#</th>
+        <th>Images</th>
+        <th>Money</th>
+        <th>Заздегіть</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>Street</th>
+        <th>House</th>
+        <th>Price</th>
+        <th>Coment</th>
+        <th>Category</th>
+        <th>Products</th>
+        <th>Count</th>
+        <th>data</th>
+        <th>time</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of orders; let i = index" >
+            <td>{{i+1}}</td>
+            <td style="display: flex;"> 
+                <img   *ngFor="let img of item.orders" style="width:  30px; height: 30px;" [src]="img.image" alt="" class="margin" >    
+            </td>
+            <td><b>{{item.money}}</b> </td>
+            <td> <b>{{item.delivery}}</b></td>
+            <td>{{item.userName}}</td>
+           
+            <td>{{item.userPhone}}</td>
+            <td>{{item.userCity}}</td>
+            <td>{{item.userStreet}}</td>
+            <td>{{item.userHouse}}</td>
+            <td>{{item.totalPrice | value: 'грн'}}</td>
+            <td>{{item.userComment}}</td>
+            <td>{{item.orders| value : "nameUA"}}</td>
+            <td>{{item.orders| value : "category"}}</td>
+            <td>{{item.orders| value : "count"}}</td>
+            <td>{{item.data}}</td>
+            <td>{{item.time}}</td>
+            <td> 
+                <button (click)="delete(item)" class="btn btn-danger" type="button">Deletee</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

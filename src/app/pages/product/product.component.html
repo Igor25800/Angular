@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-5">
+        <div class="sectionTitle fadeInTop hidden-xs">
+          <h1 class="h1 as">
+              {{products[0]?.category.nameUA | titlecase}}
+            </h1>
+          <div class="emptySpace60 emptySpace-lt40 emptySpace-md30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row clear-md-3 clear-lg-3 clear-sm-2">
+      <div *ngFor="let p of products" class="col-sm-6 col-md-4">
+        <div class="productThumbnail productItemAnimate animated">
+          <a [routerLink]="['/products/' + p.category.nameEN + '/', p.id]" class="productImage preview preloaded" [style.backgroundImage]="'url('+p.image+')'"></a>
+          <div class="productInfoWrapp">
+            <div class="productDescription normall">
+              <div class="h5 as">
+                <a [routerLink]="['/products/' + p.category.nameEN + '/', p.id]">{{p.nameUA}}</a>
+              </div>
+              <p>{{p.description}}</p>
+            </div>
+            <div class="productOrder">
+              <div class="productPrice">
+                <span>{{count(p)}}</span> <i>грн</i>
+              </div>
+              <div class="productCountWrapper">
+                <span (click)="productCounter(p, false)" class="productCount lessProduct"></span>
+                <input type="text" [value]="p.count">
+                <span (click)="productCounter(p, true)" class="productCount moreProduct"></span>
+              </div>
+              <div (click)="addToBasket(p)" class="button add-to-cart-product">Замовити</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="emptySpace40 emptySpace-xs0"></div>
+  </div>
+  

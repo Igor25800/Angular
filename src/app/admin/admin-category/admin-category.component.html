@@ -1,0 +1,57 @@
+<h6 style="text-align: center;">Можна добавляти скільки хочеш І вони появялться  Продуктах і  можна добавляти продукти</h6>
+<form>
+    <div class="form-group">
+      <label for="nameUA">Name ua</label>
+      <input [(ngModel)]="nameUA" name="nameUA" type="text" id="nameUA" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="nameEN">Name en</label>
+      <input [(ngModel)]="nameEN" name="nameEN" type="text" id="nameEN" class="form-control">
+    </div>
+
+    <div style="margin-top:  20px;" class="custom-file mb-3">
+      <label for="formFile" class="custom-file-label">Default file input example</label>
+      <input (change)="uploadFile($event)" class="custom-file-input" type="file" id="formFile">
+  </div>
+  
+  <div class="progress">
+      <div  id="progres" class="progress-bar progress-bar-striped bg-primary" 
+      [style.width]=" (uploadProgress | async) + '%'" 
+      role="progressbar" 
+      aria-valuemin="0" 
+      aria-valuemax="100"></div>
+  </div>
+
+    <button  style="margin-top: 20px;"  [textContent]="isClass? 'Edit': 'Add' "  [ngClass]="isClass?'btn btn-danger' : 'btn btn-success' "    (click)="addCategory()"></button>
+  </form>
+
+
+
+  <hr>
+  <table class="table">
+    <thead>
+      <th>#</th>
+      <th>Images</th>
+      <th>Name UA</th>
+      <th>Name EN</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of adminCategory; let i=index">
+          <td>{{ i+1 }}</td>
+          <td>
+            <img style="width: 50px; height: 50px;" [src]="c?.images" alt="">
+          </td>
+          <td>{{ c.nameUA }}</td>
+          <td>{{ c.nameEN }}</td>
+          <td>
+              <button class="btn btn-warning" (click)="editCategory(c)">Edit</button>
+          </td>
+          <td>
+              <button class="btn btn-danger" (click)="deleteCategory(c)">Delete</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  
